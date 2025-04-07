@@ -1,0 +1,105 @@
+@Metadata.layer: #CORE
+@UI: {headerInfo: {  typeName: 'Employee', typeNamePlural: 'Employees', title: {
+            type: #STANDARD,
+            label: 'Employee Tax',
+            value: 'EmployeeID'
+        }
+    }
+}
+annotate view Z_C_EMP_TAX
+    with 
+{
+    @UI.facet: [
+            {
+                id: 'Employee',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Employee Info',
+                position: 10
+            }
+        ]
+
+ @UI : { 
+            identification: [ 
+                { position: 10, label: 'Employee ID' } 
+            ],
+            lineItem: [ 
+                { position: 10 }
+            ],
+            selectionField: [ 
+                { position: 10 } 
+            ]
+        }
+    
+    
+       EmployeeID;
+
+        @UI : { 
+            identification: [ 
+                { position: 11, label: 'Employee Name' } 
+            ],
+            lineItem: [ 
+                { position: 11 } 
+            ],
+            selectionField: [ 
+                { position: 11 } 
+            ]
+        }
+        EmployeeName;
+
+        @UI : { 
+            identification: [ 
+                { position: 12, label: 'Employee Department' } 
+            ],
+            lineItem: [ 
+                { position: 12 } 
+            ],
+            selectionField: [ 
+                { position: 12 } 
+            ]
+        }
+   //      @Consumption: { valueHelpDefinition: [{ entity: { name: 'Z_I_DEPT_11563', element: 'Value' }}]}
+        EmployeeDept;
+
+        @UI : { 
+            identification: [ 
+                { position: 13, label: 'Employee Salary' } 
+            ],
+            lineItem: [ 
+                { position: 13 } 
+            ],
+            selectionField: [ 
+                { position: 13 } 
+            ]
+        }
+        EmployeeSalary;
+
+        @UI : { 
+            identification: [ 
+                { position: 14, label: 'Employee Tax' } 
+            ],
+            lineItem: [ 
+                { position: 14 } 
+            ],
+            selectionField: [ 
+                { position: 14 } 
+            ]
+        }
+        EmployeeTax;
+
+        @UI : { 
+            identification: [ 
+                { position: 15, label: 'Employee PF' } 
+            ],
+            lineItem: [ 
+                { position: 15 } 
+            ],
+            selectionField: [ 
+                { position: 15 } 
+            ]
+        }
+     
+        EmployeePF;
+
+      
+}

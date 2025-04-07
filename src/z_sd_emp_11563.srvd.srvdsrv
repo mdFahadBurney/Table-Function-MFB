@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Employee'
+define service Z_SD_EMP_11563 {
+  expose Z_C_EMP_TAX;
+}

@@ -1,0 +1,27 @@
+managed implementation in class zbp_i_emp_tax unique;
+strict ( 2 );
+
+define behavior for Z_I_EMP_TAX //alias <alias_name>
+persistent table ztm_emp_Tab
+with additional save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly,numbering : managed ) EmployeeID;
+  field( readonly ) EmployeeTax,EmployeePF;
+
+  mapping for ztm_emp_tab{
+  EmployeeID = empid;
+  EmployeeName = empname;
+  EmployeeDept = empdept;
+  EmployeeSalary = empsalary;
+  EmployeePF = emppf;
+  EmployeeTax = emptax;
+
+
+  }
+}
